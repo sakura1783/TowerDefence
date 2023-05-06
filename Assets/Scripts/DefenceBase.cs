@@ -10,24 +10,33 @@ public class DefenceBase : MonoBehaviour
     [SerializeField]
     private int hp;
 
-    [SerializeField]
-    private EnemyController enemyController;
-
     void Start()
     {
         hp = maxHp;
     }
 
+    //TODO 設定用メソッドの作成。作成後はStartメソッドを削除
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy")
+        if (collision.gameObject.TryGetComponent(out EnemyController enemyController))
         {
-            Mathf.Clamp(hp - enemyController.attackPoint, 0, maxHp);
+            hp =  Mathf.Clamp(hp - enemyController.attackPoint, 0, maxHp);
+
+            //TODO ダメージ演出生成
+
+            //TODO ゲーム画面に耐久力の表示がある場合、その表示を更新
 
             if (hp <= 0)
             {
                 Debug.Log("Game Over...");
+
+                //TODO ゲームオーバー処理
             }
+
+            enemyController.DestroyEnemy();
         }
     }
+
+    //TODO ダメージ演出生成用のメソッドの作成
 }

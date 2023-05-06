@@ -620,6 +620,7 @@ MonoBehaviour:
   maxCurrency: 1000
   currencyIntervalTime: 120
   addCurrencyPoint: 100
+  macCharaPlacementCount: 0
 --- !u!4 &726443479
 Transform:
   m_ObjectHideFlags: 0
@@ -4711,6 +4712,7 @@ MonoBehaviour:
   maxEnemyCount: 5
   currentGameState: 0
   enemiesList: []
+  uiManager: {fileID: 2039179862}
 --- !u!4 &1365753327
 Transform:
   m_ObjectHideFlags: 0
@@ -6253,6 +6255,37 @@ Transform:
   - {fileID: 537109458}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1825460527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1825460528}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1825460528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825460527}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1201.953, y: 501.08374, z: 7.482325}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1896709158
 GameObject:

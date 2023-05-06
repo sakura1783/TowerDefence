@@ -31,6 +31,11 @@
 
         void Update()
         {
+            if (gameManager.GetPlacementCharaCount() >= GameData.instance.macCharaPlacementCount)
+            {
+                return;
+            }
+
             if (Input.GetMouseButtonDown(0) && !placementCharaSelectPopUp.gameObject.activeSelf && gameManager.currentGameState == GameManager.GameState.Play)  //activeSelfはオブジェクトの表示、非表示の情報がtrue,falseで返される
             {
                 gridPos = grid.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));
@@ -118,7 +123,8 @@
                 //全ての敵の移動を再開
                 gameManager.ResumeEnemies();
 
-                //TODO カレンシーの加算処理を再開
+                //カレンシーの加算処理を再開
+                StartCoroutine(gameManager.TimeToCurrency());
             }
         }
 
@@ -141,18 +147,23 @@
         /// <param name="chooseCharaData"></param>
         public void CreateChooseChara(CharaData charaData)
         {
-        //TODO コスト支払い
+            //コスト支払い
+            GameData.instance.currency -= charaData.cost;
+
+            //カレンシーの画面表示を更新
+            gameManager.uiManager.UpdateDisplayCurrency();
 
             CharaController chara = Instantiate(charaControllerPrefab, gridPos, Quaternion.identity);
 
             //位置が左下を0, 0としているので、中央にくるように調整
             chara.transform.position = new Vector2(chara.transform.position.x + 0.5f, chara.transform.position.y + 0.5f);
 
-            //TODO キャラの設定
+            //キャラの設定
             chara.SetUpChara(charaData, gameManager);
 
             Debug.Log(charaData.charaName);
 
-            //TODO キャラをリストに追加
+            //キャラをリストに追加
+            gameManager.AddCharasList(chara);
         }
     }

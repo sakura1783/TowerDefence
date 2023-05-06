@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
 
     public UIManager uiManager;
 
+    [SerializeField] private List<CharaController> charasList = new List<CharaController>();
+
     void Start()
     {
         SetGameState(GameState.Prepare);
@@ -174,5 +176,33 @@ public class GameManager : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    /// <summary>
+    /// 選択したキャラの情報をListに追加
+    /// </summary>
+    /// <param name="chara"></param>
+    public void AddCharasList(CharaController chara)
+    {
+        charasList.Add(chara);
+    }
+
+    /// <summary>
+    /// 選択したキャラを破棄し、情報をListから削除
+    /// </summary>
+    /// <param name="chara"></param>
+    public void RemoveCharasList(CharaController chara)
+    {
+        Destroy(chara.gameObject);
+        charasList.Remove(chara);
+    }
+
+    /// <summary>
+    /// 現在の配置しているキャラの数の取得
+    /// </summary>
+    /// <returns></returns>
+    public int GetPlacementCharaCount()
+    {
+        return charasList.Count;
     }
 }

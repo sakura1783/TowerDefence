@@ -42,8 +42,6 @@ public class GameManager : MonoBehaviour
 
         //TODO ゲームデータを初期化
 
-        //練習
-
         //TODO ステージの設定 + ステージごとのPathDataを設定
 
         //キャラ配置ようポップアップの生成と設定

@@ -57,8 +57,6 @@ public class SelectCharaDetail : MonoBehaviour
 
     public bool JudgePermissionCost(int value)
     {
-        Debug.Log("コスト確認");
-
         //コストが支払える場合
         if (charaData.cost <= value)
         {

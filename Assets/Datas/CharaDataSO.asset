@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6c98d16b2b2411ebac94e745dea197, type: 3}
+  m_Name: CharaDataSO
+  m_EditorClassIdentifier: 
+  charaDatasList:
+  - charaName: Arca
+    charaNo: 0
+    cost: 300
+    charaSprite: {fileID: 573431723, guid: b609300ca27114271b59a4e33f56a7ba, type: 3}
+    attackPower: 10
+    attackRange: 0
+    intervalAttackTime: 120
+    maxAttackCount: 1
+    discription: "\u30A2\u30EB\u30AB\u3002\u653B\u6483\u529B\u306F\u9AD8\u304F\u3001\u30B3\u30B9\u30C8\u3082\n\u9AD8\u3044\u3002\u653B\u6483\u56DE\u6570\u306F1\u56DE\u3002\u4E00\u6483\u5FC5\u6BBA\u306E\n\u30A2\u30BF\u30C3\u30AB\u30FC\u3002"
+    charaAnim: {fileID: 7400000, guid: 22eed13d2ce584044a860572be4524b6, type: 2}
+  - charaName: theo
+    charaNo: 1
+    cost: 100
+    charaSprite: {fileID: -610478552, guid: ed5f7cf53987c42beb2b779d921ccd0f, type: 3}
+    attackPower: 1
+    attackRange: 1
+    intervalAttackTime: 90
+    maxAttackCount: 6
+    discription: "\u30B7\u30AA\u3002\u653B\u6483\u529B\u304C\u4F4E\u3044\u304C\u3001\u653B\u6483\u56DE\u6570\n\u306F\u591A\u3044\u3002\u30B3\u30B9\u30C8\u304C\u4F4E\u304F\u3001\u653B\u6483\u307E\u3067\n\u306E\u6642\u9593\u3082\u5C11\u306A\u3044\u3002"
+    charaAnim: {fileID: 7400000, guid: 6c7f8e2d195974b899344a25ab047b94, type: 2}
+  - charaName: Iris
+    charaNo: 2
+    cost: 200
+    charaSprite: {fileID: 426925866, guid: 3ace0d7cfca024c1aa8ad8d3b4391fa5, type: 3}
+    attackPower: 2
+    attackRange: 1
+    intervalAttackTime: 120
+    maxAttackCount: 4
+    discription: "\u30A2\u30A4\u30EA\u30B9\u3002\u30B3\u30B9\u30C8\u3001\u653B\u6483\u529B\u3001\u653B\u6483\n\u7BC4\u56F2\u3001\u653B\u6483\u307E\u3067\u306E\u6642\u9593\u306F\u5E73\u5747\u7684\u3002\n\u653B\u6483\u56DE\u6570\u306F\u591A\u3081\u3002"
+    charaAnim: {fileID: 7400000, guid: a6ccc4892e16e40d1b69f26b14102cd2, type: 2}
+  - charaName: Zoey
+    charaNo: 3
+    cost: 200
+    charaSprite: {fileID: 1354397365, guid: eb0d85d94b53d46d1a9815d59f9a1930, type: 3}
+    attackPower: 3
+    attackRange: 2
+    intervalAttackTime: 180
+    maxAttackCount: 3
+    discription: "\u30BE\u30A4\u30FC\u3002\u653B\u6483\u7BC4\u56F2\u304C\u5E83\u304F\u3001\u653B\u6483\u307E\u3067\u306E\n\u6642\u9593\u306F\u9577\u3081\u3002\u653B\u6483\u529B\u304C\u9AD8\u3081\u3002"
+    charaAnim: {fileID: 7400000, guid: 170c87e1c922e452d8209595f77ad64d, type: 2}
+  - charaName: Eva
+    charaNo: 4
+    cost: 300
+    charaSprite: {fileID: -1978570482, guid: def470e71c611416390bb969c21290a7, type: 3}
+    attackPower: 4
+    attackRange: 3
+    intervalAttackTime: 210
+    maxAttackCount: 2
+    discription: "\u30A8\u30F4\u30A1\u3002\u653B\u6483\u7BC4\u56F2\u304C\u5E83\u304F\u3001\u653B\u6483\u529B\u3082\u9AD8\u3044\u3002\n\u653B\u6483\u307E\u3067\u306E\u6642\u9593\u304C\u9577\u3044\u3002\u653B\u6483\u56DE\u6570\u306F\u5C11\u306A\n\u3044\u3002"
+    charaAnim: {fileID: 7400000, guid: 29d3c8435bbed453b817e264eac76c1c, type: 2}

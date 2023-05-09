@@ -6346,6 +6346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charaDataSO: {fileID: 11400000, guid: dd6a919a4d7784ccf95982342e4155a4, type: 2}
   attackRangeSizeSO: {fileID: 11400000, guid: 6ad4bfa3433b14278883e4c5c0e49907, type: 2}
+  enemyDataSO: {fileID: 11400000, guid: ac675bba9647144be91522d97f536e48, type: 2}
 --- !u!1 &1590536918
 GameObject:
   m_ObjectHideFlags: 0

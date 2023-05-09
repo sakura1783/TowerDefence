@@ -16,7 +16,7 @@ public class EnemyDataSO : ScriptableObject
         public int hp;
         public int attackPower;
         public int moveSpeed;
-        public EnemyType enemuType;
+        public EnemyType enemyType;
 
         [Header("アイテムドロップ率")] public int itemDropRate;
 

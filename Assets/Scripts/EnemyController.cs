@@ -28,8 +28,18 @@ public class EnemyController : MonoBehaviour
 
     private GameManager gameManger;
 
-    public void SetUpEnemyController(Vector3[] pathsData, GameManager gameManager)
+    public EnemyDataSO.EnemyData enemyData;
+
+    public void SetUpEnemyController(Vector3[] pathsData, GameManager gameManager, EnemyDataSO.EnemyData enemyData)
     {
+        this.enemyData = enemyData;
+
+        moveSpeed = this.enemyData.moveSpeed;
+
+        attackPoint = this.enemyData.attackPower;
+
+        maxHp = this.enemyData.hp;
+
         this.gameManger = gameManager;
 
         hp = maxHp;

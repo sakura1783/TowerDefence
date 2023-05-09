@@ -8,6 +8,8 @@ public class DataBaseManager : MonoBehaviour
 
     public AttackRangeSizeSO attackRangeSizeSO;
 
+    public EnemyDataSO enemyDataSO;
+
     void Awake()
     {
         if (instance == null)

@@ -205,4 +205,25 @@ public class GameManager : MonoBehaviour
     {
         return charasList.Count;
     }
+
+    /// <summary>
+    /// 選択したキャラの配置解除の確認(ReturnSelectCharaPopUpから呼び出される)
+    /// </summary>
+    /// <param name="isReturnChara"></param>
+    /// <param name="chara"></param>
+    public void JudgeReturnChara(bool isReturnChara, CharaController chara)
+    {
+        if (isReturnChara)
+        {
+            RemoveCharasList(chara);
+        }
+
+        SetGameState(GameState.Play);
+
+        //全ての敵の移動を再開
+        ResumeEnemies();
+
+        //カレンシーの加算処理を再開
+        StartCoroutine(TimeToCurrency());
+    }
 }

@@ -207,6 +207,21 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
+    /// 配置解除を選択するポップアップ作成の準備
+    /// </summary>
+    /// <param name="chara"></param>
+    public void PrepareCreateReturnCharaPopUp(CharaController chara)
+    {
+        SetGameState(GameState.Stop);
+
+        //全ての敵の移動を一時停止
+        PauseEnemies();
+
+        //配置解除を選択するポップアップを作成
+        uiManager.CreateReturnCharaPopUp(chara, this);
+    }
+
+    /// <summary>
     /// 選択したキャラの配置解除の確認(ReturnSelectCharaPopUpから呼び出される)
     /// </summary>
     /// <param name="isReturnChara"></param>

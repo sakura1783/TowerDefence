@@ -190,4 +190,13 @@ public class CharaController : MonoBehaviour
             }
         }
     }
+
+    /// <summary>
+    /// キャラをタップした際の処理(EventTriggerに登録するメソッド)
+    /// </summary>
+    public void OnClickChara()
+    {
+        //GameManagerを経由して、ゲームの進行状態を切り替えつつ、UIManagerへ処理を繋げてもらうためのメソッド
+        gameManger.PrepareCreateReturnCharaPopUp(this);
+    }
 }

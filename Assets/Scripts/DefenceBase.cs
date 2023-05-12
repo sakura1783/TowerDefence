@@ -12,7 +12,14 @@ public class DefenceBase : MonoBehaviour
 
     void Start()
     {
-        hp = maxHp;
+        if (GameData.instance.isDebug)
+        {
+            maxHp = GameData.instance.defenceBaseLife;
+        }
+        else
+        {
+            maxHp = hp;
+        }
     }
 
     //TODO 設定用メソッドの作成。作成後はStartメソッドを削除

@@ -16,6 +16,11 @@ public class GameData : MonoBehaviour
 
     public int macCharaPlacementCount;  //配置できるキャラの上限数
 
+    [Header("デバックモードの切り替え")]
+    public bool isDebug;
+
+    public int defenceBaseLife;
+
     void Awake()
     {
         if (instance == null)

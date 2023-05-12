@@ -776,6 +776,8 @@ MonoBehaviour:
   currencyIntervalTime: 120
   addCurrencyPoint: 100
   macCharaPlacementCount: 3
+  isDebug: 1
+  defenceBaseLife: 100
 --- !u!4 &726443479
 Transform:
   m_ObjectHideFlags: 0

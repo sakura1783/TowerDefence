@@ -45,7 +45,10 @@ public class EnemyController : MonoBehaviour
         hp = maxHp;
 
         //Animatorコンポーネントを取得してanim変数に代入。GetComponentのように<型引数>を指定していないのは、anim変数によって型を推論することが可能であるため。
-        TryGetComponent(out anim);
+        if (TryGetComponent(out anim))
+        {
+            SetUpAnimation();
+        }
 
         paths = pathsData;
 
@@ -138,5 +141,18 @@ public class EnemyController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         tween.timeScale = 1.0f;
+    }
+
+    /// <summary>
+    /// AnimatorControllerをAnimatorOverrideControllerを使用して変更
+    /// </summary>
+    private void SetUpAnimation()
+    {
+        //このエネミーのEnemyData内にアニメーション用のデータがあるか確認する
+        if (enemyData.enemyOverrideController != null)
+        {
+            //アニメーションのデータがある場合には、アニメーションを上書きする
+            anim.runtimeAnimatorController = enemyData.enemyOverrideController;
+        }
     }
 }

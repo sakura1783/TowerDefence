@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 7644278484155797481}
   - component: {fileID: 3923670940644969783}
   - component: {fileID: 6740810241470876844}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: txtAttackCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 239344028090253957}
   - component: {fileID: 794764607697724036}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: AttackRangeArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +367,7 @@ GameObject:
   - component: {fileID: 6164472002177549117}
   - component: {fileID: 4573229734380242880}
   - component: {fileID: 1195090823066276417}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: imgAttackIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 7003999301048669356}
   - component: {fileID: 3279020200413024399}
   - component: {fileID: 2890017851253175351}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -18,19 +18,22 @@ MonoBehaviour:
     hp: 2
     attackPower: 1
     moveSpeed: 50
-    enemuType: 0
+    enemyType: 0
     itemDropRate: 0
+    enemyOverrideController: {fileID: 22100000, guid: 2a17b864db587403f9a9c1865f1be35b, type: 2}
   - enemyName: Bear
     enemyNo: 1
     hp: 3
     attackPower: 1
     moveSpeed: 40
-    enemuType: 1
+    enemyType: 0
     itemDropRate: 0
+    enemyOverrideController: {fileID: 22100000, guid: ca3045719e781461b9e355c42b378c56, type: 2}
   - enemyName: Vein
     enemyNo: 2
     hp: 4
     attackPower: 1
     moveSpeed: 30
-    enemuType: 2
+    enemyType: 0
     itemDropRate: 0
+    enemyOverrideController: {fileID: 22100000, guid: f2fad154e251d415a9f9782b402ecbc7, type: 2}

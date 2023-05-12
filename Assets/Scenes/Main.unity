@@ -775,7 +775,7 @@ MonoBehaviour:
   maxCurrency: 1000
   currencyIntervalTime: 120
   addCurrencyPoint: 100
-  macCharaPlacementCount: 5
+  macCharaPlacementCount: 3
 --- !u!4 &726443479
 Transform:
   m_ObjectHideFlags: 0
@@ -6557,6 +6557,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlacementCharaSelectPopUp
       objectReference: {fileID: 0}
+    - target: {fileID: 3362485278241729909, guid: 6a2c1140310514d6b85d4b72b3005bcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3362485278241729910, guid: 6a2c1140310514d6b85d4b72b3005bcb, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6647,27 +6651,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3760144193972205040, guid: 6a2c1140310514d6b85d4b72b3005bcb, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -1000
       objectReference: {fileID: 0}
     - target: {fileID: 4391730170772699508, guid: 6a2c1140310514d6b85d4b72b3005bcb, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4391730170772699508, guid: 6a2c1140310514d6b85d4b72b3005bcb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4462453752861907253, guid: 6a2c1140310514d6b85d4b72b3005bcb, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4462453752861907253, guid: 6a2c1140310514d6b85d4b72b3005bcb, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4462453752861907253, guid: 6a2c1140310514d6b85d4b72b3005bcb, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 8836866087925525719, guid: 6a2c1140310514d6b85d4b72b3005bcb, type: 3}
       propertyPath: imgPickupChara

@@ -38,18 +38,28 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private List<CharaController> charasList = new List<CharaController>();
 
+    [SerializeField] private DefenceBase defenceBase;
+
+    [SerializeField] private MapInfo currentMapInfo;
+
+    [SerializeField] private DefenceBase defenceBasePrefab;
+
+    [SerializeField] private StageData currentStageData;
+
     void Start()
     {
         SetGameState(GameState.Prepare);
 
         //TODO ゲームデータを初期化
 
-        //TODO ステージの設定 + ステージごとのPathDataを設定
+        //ステージの設定 + ステージごとのPathDataを設定
+        SetUpStageData();
 
-        //キャラ配置ようポップアップの生成と設定
+        //キャラ配置用ポップアップの生成と設定
         StartCoroutine(charaGenerator.SetUpCharaGenerator(this));
 
-        //TODO 拠点の設定
+        //拠点の設定
+        defenceBase.SetUpDefenceBase(this, currentStageData.defenceBaseLife, uiManager);
 
         //TODO オープニング演出設定
 
@@ -57,7 +67,7 @@ public class GameManager : MonoBehaviour
 
         SetGameState(GameState.Play);
 
-        StartCoroutine(enemyGenerator.PrepareEnemyGenerate(this));  //thisでGameManagerクラスを渡している
+        StartCoroutine(enemyGenerator.PrepareEnemyGenerate(this, currentStageData));  //thisでGameManagerクラスを渡している
 
         //カレンシーの自動獲得処理の開始
         StartCoroutine(TimeToCurrency());
@@ -240,5 +250,34 @@ public class GameManager : MonoBehaviour
 
         //カレンシーの加算処理を再開
         StartCoroutine(TimeToCurrency());
+    }
+
+    /// <summary>
+    /// ステージデータの設定
+    /// </summary>
+    private void SetUpStageData()
+    {
+        //GameDataのstageNoからStageDataを取得
+        currentStageData = DataBaseManager.instance.stageDataSO.stageDatasList[GameData.instance.stageNo];
+
+        //各情報をStageDataクラスを参照して設定
+        generateIntervalTime = currentStageData.generateIntervalTime;
+        maxEnemyCount = currentStageData.mapInfo.appearEnemyInfos.Length;
+
+        //ステージ用のマップと防衛拠点の生成
+        currentMapInfo = Instantiate(currentStageData.mapInfo);
+        defenceBase = Instantiate(defenceBasePrefab, currentMapInfo.GetDefenceBaseTran());
+
+        //PathDatasの移動経路情報をStageDataクラスを参照して設定
+        PathData[] pathDatas = new PathData[currentStageData.mapInfo.appearEnemyInfos.Length];
+        for (int i = 0; i < currentStageData.mapInfo.appearEnemyInfos.Length; i++)
+        {
+            pathDatas[i] = currentStageData.mapInfo.appearEnemyInfos[i].enemyPathData;
+        }
+
+        //移動経路の情報を引数で渡して、EnemyGeneratorクラスの設定を行う
+        enemyGenerator.SetUpPathDatas(pathDatas);
+
+        //TODO 他にもあれば追加
     }
 }

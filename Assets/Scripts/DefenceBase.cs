@@ -10,14 +10,27 @@ public class DefenceBase : MonoBehaviour
     [SerializeField]
     private int hp;
 
-    void Start()
+    private GameManager gameManager;
+
+    private UIManager uiManager;
+
+    /// <summary>
+    /// 設定
+    /// </summary>
+    /// <param name="gameManager"></param>
+    /// <param name="hp"></param>
+    /// <param name="uiManager"></param>
+    public void SetUpDefenceBase(GameManager gameManager, int hp, UIManager uiManager)
     {
+        this.gameManager = gameManager;
+        this.uiManager = uiManager;
+
         if (GameData.instance.isDebug)
         {
             maxHp = GameData.instance.defenceBaseLife;
         }
 
-        hp = maxHp;
+        this.hp = maxHp;
     }
 
     //TODO 設定用メソッドの作成。作成後はStartメソッドを削除
@@ -32,7 +45,7 @@ public class DefenceBase : MonoBehaviour
 
             //TODO ゲーム画面に耐久力の表示がある場合、その表示を更新
 
-            if (hp <= 0)
+            if (hp <= 0 && gameManager.currentGameState == GameManager.GameState.Play)
             {
                 Debug.Log("Game Over...");
 

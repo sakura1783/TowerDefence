@@ -595,7 +595,7 @@ MonoBehaviour:
   macCharaPlacementCount: 3
   isDebug: 1
   defenceBaseLife: 100
-  stageNo: 0
+  stageNo: 2
 --- !u!4 &726443479
 Transform:
   m_ObjectHideFlags: 0
@@ -865,6 +865,18 @@ MonoBehaviour:
   enemiesList: []
   uiManager: {fileID: 2039179862}
   charasList: []
+  defenceBase: {fileID: 0}
+  currentMapInfo: {fileID: 0}
+  defenceBasePrefab: {fileID: 4057424985539652586, guid: 71875177c56e9443290fe070a3402d64, type: 3}
+  currentStageData:
+    stageName: 
+    stageNo: 0
+    generateIntervalTime: 0
+    clearPoint: 0
+    defenceBaseLife: 0
+    stageSprite: {fileID: 0}
+    mapInfo: {fileID: 0}
+    maxCharaPlacementCount: 0
 --- !u!4 &1365753327
 Transform:
   m_ObjectHideFlags: 0
@@ -1227,6 +1239,10 @@ PrefabInstance:
     - target: {fileID: 7580581955152447116, guid: b5579db62d9344268ada797da5b960d9, type: 3}
       propertyPath: m_Name
       value: MainMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580581955152447116, guid: b5579db62d9344268ada797da5b960d9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7580581955152447118, guid: b5579db62d9344268ada797da5b960d9, type: 3}
       propertyPath: tilemaps

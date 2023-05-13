@@ -21,6 +21,8 @@ public class GameData : MonoBehaviour
 
     public int defenceBaseLife;
 
+    public int stageNo;
+
     void Awake()
     {
         if (instance == null)

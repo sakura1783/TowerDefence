@@ -595,6 +595,7 @@ MonoBehaviour:
   macCharaPlacementCount: 3
   isDebug: 1
   defenceBaseLife: 100
+  stageNo: 0
 --- !u!4 &726443479
 Transform:
   m_ObjectHideFlags: 0
@@ -937,6 +938,7 @@ MonoBehaviour:
   charaDataSO: {fileID: 11400000, guid: dd6a919a4d7784ccf95982342e4155a4, type: 2}
   attackRangeSizeSO: {fileID: 11400000, guid: 6ad4bfa3433b14278883e4c5c0e49907, type: 2}
   enemyDataSO: {fileID: 11400000, guid: ac675bba9647144be91522d97f536e48, type: 2}
+  stageDataSO: {fileID: 11400000, guid: e903f815b3739486eb4008446c1e09e5, type: 2}
 --- !u!114 &1594745994 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1591217531146359473, guid: 6a2c1140310514d6b85d4b72b3005bcb, type: 3}

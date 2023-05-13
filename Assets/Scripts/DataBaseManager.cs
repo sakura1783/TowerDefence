@@ -5,10 +5,9 @@ public class DataBaseManager : MonoBehaviour
     public static DataBaseManager instance;
 
     public CharaDataSO charaDataSO;
-
     public AttackRangeSizeSO attackRangeSizeSO;
-
     public EnemyDataSO enemyDataSO;
+    public StageDataSO stageDataSO;
 
     void Awake()
     {

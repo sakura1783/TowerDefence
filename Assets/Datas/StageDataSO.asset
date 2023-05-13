@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21042d02d0a06460a8c48ee22b4ff8eb, type: 3}
+  m_Name: StageDataSO
+  m_EditorClassIdentifier: 
+  stageDatasList:
+  - stageName: "\u30CF\u30FC\u30D6\u306E\u68EE"
+    stageNo: 0
+    generateIntervalTime: 300
+    clearPoint: 100
+    defenceBaseLife: 4
+    stageSprite: {fileID: 0}
+    mapInfo: {fileID: 1735251939695926199, guid: 98e8852f2cad84ed4bce44639bc97e81, type: 3}
+    maxCharaPlacementCount: 5
+  - stageName: "\u30B0\u30EB\u30FC\u30DF\u30FC\u6D1E\u7A9F"
+    stageNo: 1
+    generateIntervalTime: 240
+    clearPoint: 200
+    defenceBaseLife: 3
+    stageSprite: {fileID: 0}
+    mapInfo: {fileID: 6711376174665505410, guid: a1673a2fed3ac4ce7818dfdb1b92a95f, type: 3}
+    maxCharaPlacementCount: 5
+  - stageName: "\u30AB\u30CA\u30EA\u30A2\u6E56"
+    stageNo: 2
+    generateIntervalTime: 180
+    clearPoint: 300
+    defenceBaseLife: 2
+    stageSprite: {fileID: 0}
+    mapInfo: {fileID: 7580581955152447118, guid: b5579db62d9344268ada797da5b960d9, type: 3}
+    maxCharaPlacementCount: 5

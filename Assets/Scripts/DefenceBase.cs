@@ -16,10 +16,8 @@ public class DefenceBase : MonoBehaviour
         {
             maxHp = GameData.instance.defenceBaseLife;
         }
-        else
-        {
-            maxHp = hp;
-        }
+
+        hp = maxHp;
     }
 
     //TODO 設定用メソッドの作成。作成後はStartメソッドを削除

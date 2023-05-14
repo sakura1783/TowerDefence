@@ -94,6 +94,9 @@ public class CharaController : MonoBehaviour
 
                     if (attackCount <= 0)
                     {
+                        //キャラ破壊のエフェクト
+                        DestroyCharaEffect();
+
                         Destroy(gameObject);
                         gameManger.RemoveCharasList(this);
                     }
@@ -112,7 +115,7 @@ public class CharaController : MonoBehaviour
     {
         Debug.Log("攻撃");
 
-        // TODO キャラの上に攻撃エフェクトを追加
+        //TODO キャラの上に攻撃エフェクトを追加
 
         enemy.CulcDamage(attackPower);
     }
@@ -198,5 +201,15 @@ public class CharaController : MonoBehaviour
     {
         //GameManagerを経由して、ゲームの進行状態を切り替えつつ、UIManagerへ処理を繋げてもらうためのメソッド
         gameManger.PrepareCreateReturnCharaPopUp(this);
+    }
+
+    /// <summary>
+    /// キャラ破壊のエフェクト
+    /// </summary>
+    private void DestroyCharaEffect()
+    {
+        GameObject effect = Instantiate(BattleEffectManager.instance.GetEffect(EffectType.Destroy_Chara), transform.position, Quaternion.identity);
+
+        Destroy(effect, 1.5f);
     }
 }

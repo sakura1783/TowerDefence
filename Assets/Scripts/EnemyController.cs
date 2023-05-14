@@ -92,7 +92,8 @@ public class EnemyController : MonoBehaviour
             DestroyEnemy();
         }
 
-        //TODO 演出用のエフェクト生成
+        //演出用のエフェクト生成
+        HitEnemyEffect();
 
         //ヒットストップ演出
         StartCoroutine(WaitMove()); 
@@ -107,7 +108,8 @@ public class EnemyController : MonoBehaviour
 
         // TODO SEの処理
 
-        // TODO 破壊時のエフェクトの生成や関連する処理
+        //破壊時のエフェクトの生成や関連する処理
+        DestroyEnemyEffect();
 
         gameManger.CountUpDestroyEnemyCount(this);
 
@@ -154,5 +156,25 @@ public class EnemyController : MonoBehaviour
             //アニメーションのデータがある場合には、アニメーションを上書きする
             anim.runtimeAnimatorController = enemyData.enemyOverrideController;
         }
+    }
+
+    /// <summary>
+    /// エネミー破壊時のエフェクト
+    /// </summary>
+    private void DestroyEnemyEffect()
+    {
+        GameObject effect = Instantiate(BattleEffectManager.instance.GetEffect(EffectType.Destroy_Enemy), transform.position, Quaternion.identity);
+
+        Destroy(effect, 1.5f);
+    }
+
+    /// <summary>
+    /// 攻撃ヒット時のエフェクト
+    /// </summary>
+    private void HitEnemyEffect()
+    {
+        GameObject effect = Instantiate(BattleEffectManager.instance.GetEffect(EffectType.Hit_Enemy), transform.position, Quaternion.identity);
+
+        Destroy(effect, 1.5f);
     }
 }

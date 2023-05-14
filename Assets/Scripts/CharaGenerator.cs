@@ -40,7 +40,7 @@
             {
                 gridPos = grid.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));
 
-                if (tilemaps.GetColliderType(gridPos) == Tile.ColliderType.None)
+                    if (tilemaps.GetColliderType(gridPos) == Tile.ColliderType.None)
                 {
                     //CreateChara(gridPos);   //タップしてもすぐにキャラの生成を行わないように、コメントアウト
 

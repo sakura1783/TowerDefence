@@ -41,7 +41,8 @@ public class DefenceBase : MonoBehaviour
         {
             hp =  Mathf.Clamp(hp - enemyController.attackPoint, 0, maxHp);
 
-            //TODO ダメージ演出生成
+            //ダメージ演出生成
+            CreateDamageEffect();
 
             //TODO ゲーム画面に耐久力の表示がある場合、その表示を更新
 
@@ -56,5 +57,10 @@ public class DefenceBase : MonoBehaviour
         }
     }
 
-    //TODO ダメージ演出生成用のメソッドの作成
+    private void CreateDamageEffect()
+    {
+        GameObject effect = Instantiate(BattleEffectManager.instance.GetEffect(EffectType.Hit_DefenceBase), transform.position, Quaternion.identity);
+
+        Destroy(effect, 1.5f);
+    }
 }

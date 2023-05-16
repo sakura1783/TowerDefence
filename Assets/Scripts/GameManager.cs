@@ -40,11 +40,11 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private DefenceBase defenceBase;
 
-    [SerializeField] private MapInfo currentMapInfo;
+    [SerializeField] private MapInfo currentMapInfo;  //生成したステージのゲームオブジェクト(MapInfoクラスのアタッチされているMainMapゲームオブジェクト)を代入するための変数
 
     [SerializeField] private DefenceBase defenceBasePrefab;
 
-    [SerializeField] private StageData currentStageData;
+    [SerializeField] private StageData currentStageData;  //今回のバトルで使用するステージのデータ情報
 
     void Start()
     {
@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
         SetUpStageData();
 
         //キャラ配置用ポップアップの生成と設定
-        StartCoroutine(charaGenerator.SetUpCharaGenerator(this));
+        StartCoroutine(charaGenerator.SetUpCharaGenerator(this, currentMapInfo));
 
         //拠点の設定
         defenceBase.SetUpDefenceBase(this, currentStageData.defenceBaseLife, uiManager);

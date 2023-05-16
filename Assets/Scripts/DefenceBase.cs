@@ -23,6 +23,8 @@ public class DefenceBase : MonoBehaviour
     public void SetUpDefenceBase(GameManager gameManager, int hp, UIManager uiManager)
     {
         this.gameManager = gameManager;
+        Debug.Log("this.gameManager のインスタンス番号 :" + this.gameManager.GetInstanceID());
+        Debug.Log("DefenceBase のインスタンス番号 :" + this.GetInstanceID());
         this.uiManager = uiManager;
 
         if (GameData.instance.isDebug)
@@ -37,6 +39,7 @@ public class DefenceBase : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("OnTriggerが動きます" + collision.gameObject.name);
         if (collision.gameObject.TryGetComponent(out EnemyController enemyController))
         {
             hp =  Mathf.Clamp(hp - enemyController.attackPoint, 0, maxHp);
@@ -46,6 +49,8 @@ public class DefenceBase : MonoBehaviour
 
             //TODO ゲーム画面に耐久力の表示がある場合、その表示を更新
 
+            Debug.Log("this.gameManager のインスタンス番号 :" + this.gameManager.GetInstanceID());
+            Debug.Log("DefenceBase のインスタンス番号 :" + this.GetInstanceID());
             if (hp <= 0 && gameManager.currentGameState == GameManager.GameState.Play)
             {
                 Debug.Log("Game Over...");

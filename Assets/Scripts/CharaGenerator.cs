@@ -66,9 +66,12 @@
         /// </summary>
         /// <param name="gameManager"></param>
         /// <returns></returns>
-        public IEnumerator SetUpCharaGenerator(GameManager gameManager)
+        public IEnumerator SetUpCharaGenerator(GameManager gameManager, MapInfo currentMapInfo)
         {
             this.gameManager = gameManager;
+
+            //tilemaps変数にそれぞれのステージのtilemapの情報を代入する
+            tilemaps = currentMapInfo.GetMapInfo().Item1;
 
             //TODO ステージのデータを取得
 

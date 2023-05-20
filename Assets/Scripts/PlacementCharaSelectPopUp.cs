@@ -30,7 +30,7 @@ public class PlacementCharaSelectPopUp : MonoBehaviour
 
     [SerializeField] private Transform selectCharaDetailTran;
 
-    [SerializeField] private List<SelectCharaDetail> selectCharaDetailsList;
+    [SerializeField] private List<SelectCharaDetail> selectCharaDetailsList = new List<SelectCharaDetail>();
 
     private CharaData chooseCharaData;
 

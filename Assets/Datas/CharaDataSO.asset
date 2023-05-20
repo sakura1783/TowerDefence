@@ -23,6 +23,7 @@ MonoBehaviour:
     maxAttackCount: 1
     discription: "\u30A2\u30EB\u30AB\u3002\u653B\u6483\u529B\u306F\u9AD8\u304F\u3001\u30B3\u30B9\u30C8\u3082\n\u9AD8\u3044\u3002\u653B\u6483\u56DE\u6570\u306F1\u56DE\u3002\u4E00\u6483\u5FC5\u6BBA\u306E\n\u30A2\u30BF\u30C3\u30AB\u30FC\u3002"
     charaAnim: {fileID: 7400000, guid: 22eed13d2ce584044a860572be4524b6, type: 2}
+    engageCost: 200
   - charaName: theo
     charaNo: 1
     cost: 100
@@ -33,6 +34,7 @@ MonoBehaviour:
     maxAttackCount: 6
     discription: "\u30B7\u30AA\u3002\u653B\u6483\u529B\u304C\u4F4E\u3044\u304C\u3001\u653B\u6483\u56DE\u6570\n\u306F\u591A\u3044\u3002\u30B3\u30B9\u30C8\u304C\u4F4E\u304F\u3001\u653B\u6483\u307E\u3067\n\u306E\u6642\u9593\u3082\u5C11\u306A\u3044\u3002"
     charaAnim: {fileID: 7400000, guid: 6c7f8e2d195974b899344a25ab047b94, type: 2}
+    engageCost: 100
   - charaName: Iris
     charaNo: 2
     cost: 200
@@ -43,6 +45,7 @@ MonoBehaviour:
     maxAttackCount: 4
     discription: "\u30A2\u30A4\u30EA\u30B9\u3002\u30B3\u30B9\u30C8\u3001\u653B\u6483\u529B\u3001\u653B\u6483\n\u7BC4\u56F2\u3001\u653B\u6483\u307E\u3067\u306E\u6642\u9593\u306F\u5E73\u5747\u7684\u3002\n\u653B\u6483\u56DE\u6570\u306F\u591A\u3081\u3002"
     charaAnim: {fileID: 7400000, guid: a6ccc4892e16e40d1b69f26b14102cd2, type: 2}
+    engageCost: 200
   - charaName: Zoey
     charaNo: 3
     cost: 200
@@ -53,6 +56,7 @@ MonoBehaviour:
     maxAttackCount: 3
     discription: "\u30BE\u30A4\u30FC\u3002\u653B\u6483\u7BC4\u56F2\u304C\u5E83\u304F\u3001\u653B\u6483\u307E\u3067\u306E\n\u6642\u9593\u306F\u9577\u3081\u3002\u653B\u6483\u529B\u304C\u9AD8\u3081\u3002"
     charaAnim: {fileID: 7400000, guid: 170c87e1c922e452d8209595f77ad64d, type: 2}
+    engageCost: 300
   - charaName: Eva
     charaNo: 4
     cost: 300
@@ -63,3 +67,4 @@ MonoBehaviour:
     maxAttackCount: 2
     discription: "\u30A8\u30F4\u30A1\u3002\u653B\u6483\u7BC4\u56F2\u304C\u5E83\u304F\u3001\u653B\u6483\u529B\u3082\u9AD8\u3044\u3002\n\u653B\u6483\u307E\u3067\u306E\u6642\u9593\u304C\u9577\u3044\u3002\u653B\u6483\u56DE\u6570\u306F\u5C11\u306A\n\u3044\u3002"
     charaAnim: {fileID: 7400000, guid: 29d3c8435bbed453b817e264eac76c1c, type: 2}
+    engageCost: 300

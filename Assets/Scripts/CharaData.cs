@@ -21,5 +21,7 @@ public class CharaData
 
     public AnimationClip charaAnim;
 
+    public int engageCost;
+
     //TODO 他にもあれば追加
 }

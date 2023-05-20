@@ -27,4 +27,12 @@ public class UIManager : MonoBehaviour
         ReturnSelectCharaPopUp returnSelectCharaPopUp = Instantiate(returnSelectCharaPopUpPrefab, canvasTran, false);
         returnSelectCharaPopUp.SetUpReturnSelectCharaPopUp(charaController, gameManger);
     }
+
+    /// <summary>
+    /// オープニング処理
+    /// </summary>
+    //public string Opening()
+    //{
+        //TODO オープニングの処理を追加する
+    //}
 }

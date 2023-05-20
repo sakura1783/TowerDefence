@@ -46,11 +46,12 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private StageData currentStageData;  //今回のバトルで使用するステージのデータ情報
 
-    void Start()
+    IEnumerator Start()
     {
         SetGameState(GameState.Prepare);
 
-        //TODO ゲームデータを初期化
+        //ゲームデータを初期化
+        RefreshGameData();
 
         //ステージの設定 + ステージごとのPathDataを設定
         SetUpStageData();
@@ -62,6 +63,7 @@ public class GameManager : MonoBehaviour
         defenceBase.SetUpDefenceBase(this, currentStageData.defenceBaseLife, uiManager);
 
         //TODO オープニング演出設定
+        //yield return StartCoroutine(uiManager.Opening());
 
         isEnemyGenerate = true;
 
@@ -71,6 +73,8 @@ public class GameManager : MonoBehaviour
 
         //カレンシーの自動獲得処理の開始
         StartCoroutine(TimeToCurrency());
+
+        yield return null;  // <= TODOが終わった後に消す
     }
 
     /// <summary>
@@ -159,7 +163,8 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("ゲームクリア");
 
-            //TODO ゲームクリアの処理を追加
+            //ゲームクリアの処理を追加
+            StartCoroutine(GameClearAndResult());
         }
     }
 
@@ -279,5 +284,77 @@ public class GameManager : MonoBehaviour
         enemyGenerator.SetUpPathDatas(pathDatas);
 
         //TODO 他にもあれば追加
+    }
+
+    /// <summary>
+    /// ゲームクリアと報酬処理
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator GameClearAndResult()
+    {
+        //ゲーム終了
+        GameUpToCommon();
+
+        //TODO ゲームクリア演出(文字)
+        //yield return StartCoroutine(uiManager.CreateGameClearSet());
+
+        //TODO ロゴで演出
+        //yield return StartCoroutine(uiManager.GameClear());
+
+        //クリアボーナスの獲得
+        GameData.instance.totalClearPoint += currentStageData.clearPoint;
+
+        //次のステージの番号を設定
+        GameData.instance.stageNo++;
+
+        //次のステージが未クリアである場合
+        if (!GameData.instance.clearedStageNosList.Contains(GameData.instance.stageNo))
+        {
+            //次のステージを登録してステージシーンで表示できるようにする(=> すでにListに登録してある場合には重複して登録しない)
+            GameData.instance.clearedStageNosList.Add(GameData.instance.stageNo);
+        }
+
+        //シーン遷移
+        SceneStageManager.instance.PrepareNextScene(SceneType.World);
+
+        //自分で追加したよ
+        yield return null;
+    }
+
+    /// <summary>
+    /// ゲーム終了時の共通処理
+    /// </summary>
+    private void GameUpToCommon()
+    {
+        //ゲームの進行状態をゲーム終了に変更
+        SetGameState(GameState.GameUp);
+
+        //キャラ配置のポップアップが開いている場合には破棄
+        charaGenerator.InactivatePlacementCharaSelectPopUp();
+
+        //TODO ゲーム終了時に、ゲームクリアとゲームオーバーの共通する処理を追加
+    }
+
+    /// <summary>
+    /// ゲームオーバー処理
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator GameOver()
+    {
+        GameUpToCommon();
+
+        //TODO ゲームオーバー表示
+        //uiManager.CreateGameOverSet();
+
+        //TODO ゲームオーバー時の処理を追加
+
+        yield return new WaitForSeconds(3.0f);
+
+        SceneStageManager.instance.PrepareNextScene(SceneType.World);
+    }
+
+    private void RefreshGameData()
+    {
+        //TODO デバック用の処理やバトル開始時に初期化したい処理を記述する
     }
 }

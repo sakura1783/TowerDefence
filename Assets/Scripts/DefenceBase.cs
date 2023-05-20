@@ -40,8 +40,14 @@ public class DefenceBase : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("OnTriggerが動きます" + collision.gameObject.name);
+
+        //Debug.Log("DefenceBase のインスタンス番号 :" + this.GetInstanceID());
+        //Debug.Log("this.gameManager のインスタンス番号 :" + this.gameManager.GetInstanceID());
+
+        Debug.Log(collision.gameObject);
         if (collision.gameObject.TryGetComponent(out EnemyController enemyController))
         {
+            Debug.Log("OnTrigger内のif文が動きます");
             hp =  Mathf.Clamp(hp - enemyController.attackPoint, 0, maxHp);
 
             //ダメージ演出生成
@@ -49,8 +55,6 @@ public class DefenceBase : MonoBehaviour
 
             //TODO ゲーム画面に耐久力の表示がある場合、その表示を更新
 
-            Debug.Log("this.gameManager のインスタンス番号 :" + this.gameManager.GetInstanceID());
-            Debug.Log("DefenceBase のインスタンス番号 :" + this.GetInstanceID());
             if (hp <= 0 && gameManager.currentGameState == GameManager.GameState.Play)
             {
                 Debug.Log("Game Over...");

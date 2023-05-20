@@ -68,7 +68,11 @@
         /// <returns></returns>
         public IEnumerator SetUpCharaGenerator(GameManager gameManager, MapInfo currentMapInfo)
         {
+            Debug.Log("SetUpCharaGeneratorが動きます");
             this.gameManager = gameManager;
+
+            //grid変数にそれぞれのステージのBase側のgridの情報を代入する
+            grid = currentMapInfo.GetMapInfo().Item2;
 
             //tilemaps変数にそれぞれのステージのtilemapの情報を代入する
             tilemaps = currentMapInfo.GetMapInfo().Item1;

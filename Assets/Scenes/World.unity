@@ -377,6 +377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btnEngage: {fileID: 322943018}
   engageManager: {fileID: 1471328084}
+  placementEngageCharaPopUp: {fileID: 4012941391053775654, guid: 1e5307ba189a34d818f1054f148911d3, type: 3}
 --- !u!1 &390410754
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,17 +629,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4012941391053775672, guid: 1e5307ba189a34d818f1054f148911d3, type: 3}
   m_PrefabInstance: {fileID: 4012941391558075094}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &578748912 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4012941391053775654, guid: 1e5307ba189a34d818f1054f148911d3, type: 3}
-  m_PrefabInstance: {fileID: 4012941391558075094}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5328260c5fd347afb1f8508e97817b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &834643554
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,7 +812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edb754e6edd054d949accd903ae997e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placementEngageCharaPopUpPrefab: {fileID: 578748912}
+  placementEngageCharaPopUpPrefab: {fileID: 4012941391053775654, guid: 1e5307ba189a34d818f1054f148911d3, type: 3}
   canvasTran: {fileID: 390410758}
   charaDatasList: []
 --- !u!4 &1471328085
@@ -989,11 +979,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 2340, y: 1080}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96

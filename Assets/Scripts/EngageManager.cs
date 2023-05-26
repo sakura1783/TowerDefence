@@ -16,24 +16,22 @@ public class EngageManager : MonoBehaviour
     /// 設定
     /// </summary>
     /// <returns></returns>
-    public IEnumerator SetUpEngageManager()
+    public void SetUpEngageManager()
     {
-        yield return StartCoroutine(CreatePlacementEngageCharaPopUp());
+        CreatePlacementEngageCharaPopUp();
     }
 
     /// <summary>
     /// キャラ契約ポップアップ生成
     /// </summary>
     /// <returns></returns>
-    private IEnumerator CreatePlacementEngageCharaPopUp()
+    private void CreatePlacementEngageCharaPopUp()
     {
         placementEngageCharaPopUp = Instantiate(placementEngageCharaPopUpPrefab, canvasTran, false);
 
         placementEngageCharaPopUp.SetUpPlacementEngageCharaPopUp(this, charaDatasList);
 
         placementEngageCharaPopUp.gameObject.SetActive(false);
-
-        yield return null;
     }
 
     public void InactivatePlacementEngageCharaPopUp()

@@ -9,6 +9,8 @@ public class ButtonEngage : MonoBehaviour
 
     [SerializeField] private EngageManager engageManager;
 
+    [SerializeField] private PlacementEngageCharaPopUp placementEngageCharaPopUp;
+
     public void OnClick()
     {
         btnEngage.onClick.AddListener(OnClickBtnEngage);
@@ -20,5 +22,9 @@ public class ButtonEngage : MonoBehaviour
     public void OnClickBtnEngage()
     {
         engageManager.SetUpEngageManager();
+
+        placementEngageCharaPopUp.ShowPopUp();
+
+        Debug.Log("OnClickBtnEngage");
     }
 }

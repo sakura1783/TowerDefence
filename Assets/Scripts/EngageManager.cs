@@ -27,6 +27,8 @@ public class EngageManager : MonoBehaviour
     /// <returns></returns>
     public void SetUpEngageManager()
     {
+        charaDatasList = DataBaseManager.instance.GetCharaDataList();
+
         CreatePlacementEngageCharaPopUp();
     }
 

@@ -10,6 +10,8 @@ public class EngageSelectCharaDetail : MonoBehaviour
 
     [SerializeField] private Image imgChara;
 
+    [SerializeField] private Image imgKey;
+
     private PlacementEngageCharaPopUp placementEngageCharaPopUp;
 
     private CharaData charaData;
@@ -60,8 +62,14 @@ public class EngageSelectCharaDetail : MonoBehaviour
         if (charaData.engageCost <= value)
         {
             ChangeActivateButton(true);
+
+            imgKey.gameObject.SetActive(false);
+            //imgKey.enabled = false;
+
             return true;
         }
+        imgKey.gameObject.SetActive(true);
+
         return false;
     }
 }

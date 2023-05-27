@@ -48,6 +48,7 @@ public class PlacementEngageCharaPopUp : MonoBehaviour
 
         SwitchActivateButtons(false);
 
+        Debug.Log("Listの数" + haveCharaDatasList.Count);
         //スクリプタブル・オブジェクトに登録されているキャラ分
         for (int i = 0; i < haveCharaDatasList.Count; i++)
         {

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class DataBaseManager : MonoBehaviour
 {
@@ -25,5 +26,10 @@ public class DataBaseManager : MonoBehaviour
     public Vector2 GetAttackRangeSize(AttackRangeType attackRangeType)
     {
         return attackRangeSizeSO.attackRangeSizeList.Find(x => x.attackRangeType == attackRangeType).size;
+    }
+
+    public List<CharaData> GetCharaDataList()
+    {
+        return charaDataSO.charaDatasList;
     }
 }

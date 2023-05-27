@@ -108,6 +108,7 @@ public class PlacementEngageCharaPopUp : MonoBehaviour
         }
 
         //TODO 選択しているキャラとの契約
+        GameData.instance.totalClearPoint = GameData.instance.totalClearPoint - chooseCharaData.engageCost;
 
         HidePopUp();
     }

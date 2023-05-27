@@ -11,9 +11,11 @@ public class ButtonEngage : MonoBehaviour
 
     [SerializeField] private PlacementEngageCharaPopUp placementEngageCharaPopUp;
 
-    public void OnClick()
+    public void SetUpButtonEngage()
     {
         btnEngage.onClick.AddListener(OnClickBtnEngage);
+
+        Debug.Log("buttonEngageの設定完了");
     }
 
     /// <summary>
@@ -21,9 +23,9 @@ public class ButtonEngage : MonoBehaviour
     /// </summary>
     public void OnClickBtnEngage()
     {
-        engageManager.SetUpEngageManager();
+        //placementEngageCharaPopUp.ShowPopUp();
 
-        placementEngageCharaPopUp.ShowPopUp();
+        engageManager.ActivatePlacementEngageCharaPopUp();
 
         Debug.Log("OnClickBtnEngage");
     }

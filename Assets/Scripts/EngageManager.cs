@@ -12,6 +12,15 @@ public class EngageManager : MonoBehaviour
 
     private PlacementEngageCharaPopUp placementEngageCharaPopUp;
 
+    [SerializeField] private ButtonEngage buttonEngage;
+
+    void Start()
+    {
+        SetUpEngageManager();
+
+        buttonEngage.SetUpButtonEngage();
+    }
+
     /// <summary>
     /// 設定
     /// </summary>
@@ -37,5 +46,12 @@ public class EngageManager : MonoBehaviour
     public void InactivatePlacementEngageCharaPopUp()
     {
         placementEngageCharaPopUp.gameObject.SetActive(false);
+    }
+
+    public void ActivatePlacementEngageCharaPopUp()
+    {
+        placementEngageCharaPopUp.gameObject.SetActive(true);
+
+        placementEngageCharaPopUp.ShowPopUp();
     }
 }

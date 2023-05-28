@@ -46,6 +46,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private StageData currentStageData;  //今回のバトルで使用するステージのデータ情報
 
+    [SerializeField] private TotalClearPoint totalClearPoint;
+
     IEnumerator Start()
     {
         SetGameState(GameState.Prepare);
@@ -162,6 +164,11 @@ public class GameManager : MonoBehaviour
         if (destroyEnemyCount >= maxEnemyCount)
         {
             Debug.Log("ゲームクリア");
+
+            //TotalClearPointを更新
+            totalClearPoint.UpdateTotalClearPoint();
+            //セーブ
+            GameData.instance.SaveClearPoint();
 
             //ゲームクリアの処理を追加
             StartCoroutine(GameClearAndResult());

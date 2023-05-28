@@ -7,7 +7,7 @@ using DG.Tweening;
 public class PlacementEngageCharaPopUp : MonoBehaviour
 {
     [SerializeField] private Button btnClose;
-    [SerializeField] private Button btnEngageChara;
+    [SerializeField] private Button btnEngageChara;  //「契約する」ボタン
 
     [SerializeField] private CanvasGroup placementEngageCharaCanvasGroup;
     [SerializeField] private CanvasGroup sumi_CanvasGroup;
@@ -32,6 +32,14 @@ public class PlacementEngageCharaPopUp : MonoBehaviour
     [SerializeField] private List<EngageSelectCharaDetail> engageSelectCharaDetailsList = new List<EngageSelectCharaDetail>();  //生成したキャラのボタンを管理する
 
     private CharaData chooseCharaData;  //現在選択しているキャラの情報を管理する
+
+    [SerializeField] private Transform canvasOverleyTran;
+
+    [SerializeField] private ContractDetail contractDetail;
+
+    [SerializeField] private GameObject contractSet;
+
+    [SerializeField] private CharaData charaData;
 
     /// <summary>
     /// ポップアップの設定
@@ -163,5 +171,21 @@ public class PlacementEngageCharaPopUp : MonoBehaviour
                 engageSelectCharaDetailsList[i].ChangeActivateButton(engageSelectCharaDetailsList[i].JudgePermissionEngageCost(GameData.instance.totalClearPoint));
             }
         }
+    }
+
+    /// <summary>
+    /// 設定
+    /// </summary>
+    public void SetUpBtnEngageChara()
+    {
+        btnEngageChara.onClick.AddListener(OnClickBtnEngageChara);
+    }
+
+    private void OnClickBtnEngageChara()
+    {
+        Instantiate(contractSet, canvasOverleyTran);
+
+        //SetUpContractDetailメソッドを実行する(生成する位置と情報については、変数に登録したものを使う)
+        contractDetail.SetUpContractDetail(charaData);  //TODO どうやってSetUpメソッドに情報を渡せばいいのかわからない
     }
 }

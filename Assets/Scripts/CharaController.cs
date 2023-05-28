@@ -49,8 +49,6 @@ public class CharaController : MonoBehaviour
     {
         if (!isAttack && !enemy)
         {
-            Debug.Log("敵発見");
-
             //敵の情報(EnemyController)を取得する。EnemyControllerがアタッチされているゲームオブジェクトを判別しているので、ここで、今までのTagによる判定と同じ動作で判定が行われる。
             if (collision.gameObject.TryGetComponent(out enemy))
             {

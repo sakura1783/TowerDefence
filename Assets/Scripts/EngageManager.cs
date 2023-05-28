@@ -14,15 +14,15 @@ public class EngageManager : MonoBehaviour
 
     [SerializeField] private ButtonEngage buttonEngage;
 
-    [SerializeField] private ButtonEngageChara btnEngageChara;
-
     void Start()
     {
+        GameData.instance.LoadClearPoint();
+
         SetUpEngageManager();
 
         buttonEngage.SetUpButtonEngage();
 
-        btnEngageChara.SetUpBtnEngageChara();
+        placementEngageCharaPopUp.SetUpBtnEngageChara();
     }
 
     /// <summary>

@@ -17,6 +17,7 @@ public class EngageManager : MonoBehaviour
     void Start()
     {
         GameData.instance.LoadClearPoint();
+        GameData.instance.LoadEngageCharaList();
 
         SetUpEngageManager();
 

@@ -76,5 +76,7 @@ public class ContractDetail : MonoBehaviour
     {
         //契約演出を終了して、ポップアップも閉じる
         canvasGroupContractSet.DOFade(0.0f, 0.5f).SetEase(Ease.Linear).OnComplete(() => { Destroy(gameObject); });
+
+        GameData.instance.SaveEngageCharaList();
     }
 }

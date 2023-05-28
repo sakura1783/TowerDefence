@@ -79,6 +79,21 @@ MonoBehaviour:
   engageSelectCharaDetailPrefab: {fileID: 9053610013414007350, guid: f3a9af40042a7443cb01dbc3d464c33e, type: 3}
   engageSelectCharaDetailTran: {fileID: 4012941392692148044}
   engageSelectCharaDetailsList: []
+  canvasOverleyTran: {fileID: 1366038656225800323, guid: 5fd4c1bee58704670aa01267fb1fa4ca, type: 3}
+  contractDetail: {fileID: 1839548056349987124, guid: dde7f550c88494b9eb8d4c9fbebdab5e, type: 3}
+  contractSet: {fileID: 1839548056349987123, guid: dde7f550c88494b9eb8d4c9fbebdab5e, type: 3}
+  charaData:
+    charaName: 
+    charaNo: 0
+    cost: 0
+    charaSprite: {fileID: 0}
+    attackPower: 0
+    attackRange: 0
+    intervalAttackTime: 0
+    maxAttackCount: 0
+    discription: 
+    charaAnim: {fileID: 0}
+    engageCost: 0
 --- !u!1 &4012941391179464388
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,7 +752,6 @@ GameObject:
   - component: {fileID: 4012941391976320705}
   - component: {fileID: 4012941391976320704}
   - component: {fileID: 4012941391976320707}
-  - component: {fileID: 6454968383892031652}
   m_Layer: 5
   m_Name: btnEngageChara
   m_TagString: Untagged
@@ -848,34 +862,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &6454968383892031652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4012941391976320709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60280c0bc80ea49cd8eb8f1b373b0e69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  btnEngageChara: {fileID: 4012941391976320707}
-  contractSet: {fileID: 1839548056349987123, guid: dde7f550c88494b9eb8d4c9fbebdab5e, type: 3}
-  canvasOverleyTran: {fileID: 0}
-  contractDetail: {fileID: 1839548056349987124, guid: dde7f550c88494b9eb8d4c9fbebdab5e, type: 3}
-  charaData:
-    charaName: 
-    charaNo: 0
-    cost: 0
-    charaSprite: {fileID: 0}
-    attackPower: 0
-    attackRange: 0
-    intervalAttackTime: 0
-    maxAttackCount: 0
-    discription: 
-    charaAnim: {fileID: 0}
-    engageCost: 0
 --- !u!1 &4012941392050302525
 GameObject:
   m_ObjectHideFlags: 0

@@ -56,7 +56,6 @@ public class PlacementEngageCharaPopUp : MonoBehaviour
 
         SwitchActivateButtons(false);
 
-        Debug.Log("Listの数" + haveCharaDatasList.Count);
         //スクリプタブル・オブジェクトに登録されているキャラ分
         for (int i = 0; i < haveCharaDatasList.Count; i++)
         {
@@ -174,13 +173,16 @@ public class PlacementEngageCharaPopUp : MonoBehaviour
     }
 
     /// <summary>
-    /// 設定
+    /// 契約するボタンの設定
     /// </summary>
     public void SetUpBtnEngageChara()
     {
         btnEngageChara.onClick.AddListener(OnClickBtnEngageChara);
     }
 
+    /// <summary>
+    /// 契約するボタンを押した際の処理
+    /// </summary>
     private void OnClickBtnEngageChara()
     {
         Instantiate(contractSet, canvasOverleyTran);

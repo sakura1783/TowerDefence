@@ -929,6 +929,7 @@ MonoBehaviour:
     stageSprite: {fileID: 0}
     mapInfo: {fileID: 0}
     maxCharaPlacementCount: 0
+  totalClearPoint: {fileID: 0}
 --- !u!4 &1365753327
 Transform:
   m_ObjectHideFlags: 0
@@ -1286,6 +1287,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4278137466325699514, guid: 322d385b6f18245d98209c8333b23de3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4278137466325699515, guid: 322d385b6f18245d98209c8333b23de3, type: 3}
+      propertyPath: isDebug
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

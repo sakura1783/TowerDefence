@@ -14,6 +14,8 @@ public class EngageManager : MonoBehaviour
 
     [SerializeField] private ButtonEngage buttonEngage;
 
+    private PlacementSelectStagePopUp placementSelectStagePopUp;
+
     void Start()
     {
         GameData.instance.LoadClearPoint();
@@ -35,6 +37,7 @@ public class EngageManager : MonoBehaviour
         charaDatasList = DataBaseManager.instance.GetCharaDataList();
 
         CreatePlacementEngageCharaPopUp();
+        CreatePlacementSelectStagePopUp();
     }
 
     /// <summary>
@@ -50,6 +53,11 @@ public class EngageManager : MonoBehaviour
         placementEngageCharaPopUp.gameObject.SetActive(false);
     }
 
+    private void CreatePlacementSelectStagePopUp()
+    {
+
+    }
+
     public void InactivatePlacementEngageCharaPopUp()
     {
         placementEngageCharaPopUp.gameObject.SetActive(false);
@@ -60,5 +68,17 @@ public class EngageManager : MonoBehaviour
         placementEngageCharaPopUp.gameObject.SetActive(true);
 
         placementEngageCharaPopUp.ShowPopUp();
+    }
+
+    public void InactivatePlacementSelectStagePopUp()
+    {
+        placementSelectStagePopUp.gameObject.SetActive(false);
+    }
+
+    public void ActivatePlacementSelectStagePopUp()
+    {
+        placementSelectStagePopUp.gameObject.SetActive(true);
+
+        placementSelectStagePopUp.ShowPopUp();
     }
 }

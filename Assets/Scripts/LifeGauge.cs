@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class LifeGauge : MonoBehaviour
 {
@@ -26,6 +27,6 @@ public class LifeGauge : MonoBehaviour
     public void ReduceLifeGauge()
     {
         hp = hp - enemyController.attackPoint;
-        lifeGaugeSlider.value = hp;
+        lifeGaugeSlider.DOValue(hp, 0.25f).SetEase(Ease.Linear);
     }
 }

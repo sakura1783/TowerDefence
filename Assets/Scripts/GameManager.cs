@@ -161,6 +161,15 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void JudgeGameClear()
     {
+        if (GameData.instance.defenceBaseLife <= 0)
+        {
+            Debug.Log("ゲームオーバー");
+
+            //TODO ゲームオーバー処理
+
+            return;
+        }
+
         if (destroyEnemyCount >= maxEnemyCount)
         {
             Debug.Log("ゲームクリア");

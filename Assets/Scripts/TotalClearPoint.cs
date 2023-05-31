@@ -11,7 +11,7 @@ public class TotalClearPoint : MonoBehaviour
 
     private GameData gameData;
 
-    private void SetUpTotalClearPoint(StageData stageData, GameData gameData)
+    public void SetUpTotalClearPoint(StageData stageData, GameData gameData)
     {
         this.stageData = stageData;
         this.gameData = gameData;

@@ -209,6 +209,12 @@ public class GameData : MonoBehaviour
             Debug.Log("変換に失敗しました");
         }
 
+        if (string.IsNullOrEmpty(str))
+        {
+            Debug.Log($"str変数の値 : {str}");
+            return null;
+        }
+
         //この処理はLinqの機能を利用して記述されている
         //GameDataクラスのLoadEngageCharaListメソッド内の処理の、string型(1行のカンマ区切りの文字列)をList<int>型にする処理と同じ
         return str.Split(',').ToList().ConvertAll(x => int.Parse(x));  //ConvertAllで、コレクションの要素を一括して指定の型に変換することができる。ラムダ式内でint.Parseを使用することで、要素をint型に変換している

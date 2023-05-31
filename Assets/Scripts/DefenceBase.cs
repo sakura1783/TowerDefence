@@ -14,6 +14,8 @@ public class DefenceBase : MonoBehaviour
 
     private UIManager uiManager;
 
+    [SerializeField] private LifeGauge lifeGauge;
+
     /// <summary>
     /// 設定
     /// </summary>
@@ -53,7 +55,8 @@ public class DefenceBase : MonoBehaviour
             //ダメージ演出生成
             CreateDamageEffect();
 
-            //TODO ゲーム画面に耐久力の表示がある場合、その表示を更新
+            //ゲーム画面に耐久力の表示がある場合、その表示を更新
+            lifeGauge.ReduceLifeGauge();
 
             if (hp <= 0 && gameManager.currentGameState == GameManager.GameState.Play)
             {

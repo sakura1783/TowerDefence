@@ -74,6 +74,8 @@ public class PlacementSelectStagePopUp : MonoBehaviour
         HidePopUp();
 
         SceneStageManager.instance.PrepareNextScene(SceneType.Battle);
+
+        //TODO シーン遷移する際、ステージも決めてそのステージに飛ぶ
     }
 
     /// <summary>

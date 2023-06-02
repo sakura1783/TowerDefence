@@ -18,6 +18,8 @@ public class EngageManager : MonoBehaviour
 
     [SerializeField] private WorldUIManager worldUiManager;
 
+    [SerializeField] private StageButtons stageButtons;
+
     void Start()
     {
         GameData.instance.LoadClearPoint();
@@ -28,6 +30,8 @@ public class EngageManager : MonoBehaviour
         worldUiManager.UpdateTotalClearPoint();
 
         buttonEngage.SetUpButtonEngage();
+
+        stageButtons.SetUpStageButtons();
 
         placementEngageCharaPopUp.SetUpBtnEngageChara();
     }

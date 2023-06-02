@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private StageData currentStageData;  //今回のバトルで使用するステージのデータ情報
 
-    [SerializeField] private TotalClearPoint totalClearPoint;
+    private int clearPoint;
 
     IEnumerator Start()
     {
@@ -75,6 +75,9 @@ public class GameManager : MonoBehaviour
 
         //カレンシーの自動獲得処理の開始
         StartCoroutine(TimeToCurrency());
+
+        clearPoint = currentStageData.clearPoint;
+        Debug.Log("このステージのクリアポイント : " + clearPoint);
 
         yield return null;  // <= TODOが終わった後に消す
     }
@@ -175,7 +178,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("ゲームクリア");
 
             //TotalClearPointを更新
-            totalClearPoint.UpdateTotalClearPoint();
+            GameData.instance.AddClearPoint(clearPoint);
+
             //セーブ
             GameData.instance.SaveClearPoint();
 

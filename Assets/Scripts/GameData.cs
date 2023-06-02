@@ -319,4 +319,13 @@ public class GameData : MonoBehaviour
 
         Debug.Log("ロードしました");
     }
+
+    /// <summary>
+    /// クリアポイント加算用のメソッド
+    /// </summary>
+    /// <param name="clearPoint"></param>
+    public void AddClearPoint(int clearPoint)
+    {
+        totalClearPoint = totalClearPoint + clearPoint;
+    }
 }

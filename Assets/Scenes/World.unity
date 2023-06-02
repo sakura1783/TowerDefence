@@ -2161,6 +2161,7 @@ MonoBehaviour:
   canvasTran: {fileID: 390410758}
   charaDatasList: []
   buttonEngage: {fileID: 322943021}
+  worldUiManager: {fileID: 92742865}
 --- !u!4 &1471328085
 Transform:
   m_ObjectHideFlags: 0

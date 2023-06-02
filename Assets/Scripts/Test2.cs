@@ -15,6 +15,6 @@ public class Test2 : MonoBehaviour
     {
         totalClearPoint = totalClearPoint + clearPoint;
 
-        test1.DisplayTotal();
+        //test1.DisplayTotal();
     }
 }

@@ -16,12 +16,16 @@ public class EngageManager : MonoBehaviour
 
     private PlacementSelectStagePopUp placementSelectStagePopUp;
 
+    [SerializeField] private WorldUIManager worldUiManager;
+
     void Start()
     {
         GameData.instance.LoadClearPoint();
         GameData.instance.LoadEngageCharaList();
 
         SetUpEngageManager();
+
+        worldUiManager.UpdateTotalClearPoint();
 
         buttonEngage.SetUpButtonEngage();
 

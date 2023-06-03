@@ -73,7 +73,7 @@ public class PlacementSelectStagePopUp : MonoBehaviour
     /// </summary>
     private void OnClickCancel()
     {
-        SwitchActivateButtons(false);
+        //SwitchActivateButtons(false);
 
         HidePopUp();
     }
@@ -83,9 +83,9 @@ public class PlacementSelectStagePopUp : MonoBehaviour
         HidePopUp();
 
         //TODO 破棄されないゲームオブジェクトにアタッチされているクラスに、ステージの情報を保存する
-        //GameData.instance.stageNo = 
+        GameData.instance.stageNo = chooseStageData.stageNo;
 
-        SceneStageManager.instance.PrepareNextScene(SceneType.Battle);
+        SceneStageManager.instance.PrepareNextScene(SceneType.Main);
     }
 
     /// <summary>

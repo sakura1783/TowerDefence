@@ -258,6 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageButton: {fileID: 16278517}
+  stageNo: 0
 --- !u!1 &92742864
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,6 +570,7 @@ GameObject:
   - component: {fileID: 158590832}
   - component: {fileID: 158590831}
   - component: {fileID: 158590830}
+  - component: {fileID: 158590833}
   m_Layer: 5
   m_Name: btnGloomy
   m_TagString: Untagged
@@ -678,6 +680,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 158590828}
   m_CullTransparentMesh: 1
+--- !u!114 &158590833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158590828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2800b352cc25148cb898840d3a5d6e0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageButton: {fileID: 158590830}
+  stageNo: 1
 --- !u!1 &257653761
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,7 +787,7 @@ GameObject:
   - component: {fileID: 310547293}
   - component: {fileID: 310547292}
   m_Layer: 0
-  m_Name: btnEnter
+  m_Name: btnCancel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1994,7 +2010,7 @@ GameObject:
   - component: {fileID: 1202679128}
   - component: {fileID: 1202679127}
   m_Layer: 0
-  m_Name: btnCancel
+  m_Name: btnEnter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2177,8 +2193,10 @@ MonoBehaviour:
   buttonEngage: {fileID: 322943021}
   placementSelectStagePopUp: {fileID: 1790716834}
   worldUiManager: {fileID: 92742865}
-  stageButtons: {fileID: 16278520}
-  debugStageNo: 2
+  stageButtons:
+  - {fileID: 16278520}
+  - {fileID: 158590833}
+  - {fileID: 1789256733}
 --- !u!4 &1471328085
 Transform:
   m_ObjectHideFlags: 0
@@ -2495,6 +2513,7 @@ GameObject:
   - component: {fileID: 1789256732}
   - component: {fileID: 1789256731}
   - component: {fileID: 1789256730}
+  - component: {fileID: 1789256733}
   m_Layer: 5
   m_Name: btnKanaria
   m_TagString: Untagged
@@ -2604,6 +2623,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789256728}
   m_CullTransparentMesh: 1
+--- !u!114 &1789256733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789256728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2800b352cc25148cb898840d3a5d6e0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageButton: {fileID: 1789256730}
+  stageNo: 2
 --- !u!1 &1790716831
 GameObject:
   m_ObjectHideFlags: 0
@@ -2662,8 +2695,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c730fcef46545b080ef252c27c8f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btnCancel: {fileID: 1202679127}
-  btnEnter: {fileID: 310547292}
+  btnCancel: {fileID: 310547292}
+  btnEnter: {fileID: 1202679127}
   txtStageName: {fileID: 416385331}
   txtClearPoint: {fileID: 616633944}
   txtDefenceBaseLife: {fileID: 1890502456}

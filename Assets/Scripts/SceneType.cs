@@ -1,7 +1,7 @@
 public enum SceneType
 {
     World,
-    Battle
+    Main
 
     //TODO 新しいシーンを作成したら、列挙子にもシーン名を登録する
 }

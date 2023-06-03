@@ -33,8 +33,15 @@ public class DefenceBase : MonoBehaviour
         {
             maxHp = GameData.instance.defenceBaseLife;
         }
+        else
+        {
+            maxHp = hp;
+        }
 
         this.hp = maxHp;
+        Debug.Log("hp" + this.hp);  //これ確認する
+
+        //TODO ゲージの設定をする
     }
 
     //TODO 設定用メソッドの作成。作成後はStartメソッドを削除

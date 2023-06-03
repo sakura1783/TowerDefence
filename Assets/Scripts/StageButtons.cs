@@ -15,6 +15,8 @@ public class StageButtons : MonoBehaviour
 
     private PlacementSelectStagePopUp placementSelectStagePopUp;
 
+    public int stageNo;
+
     /// <summary>
     /// ステージ選択ボタンの設定
     /// </summary>

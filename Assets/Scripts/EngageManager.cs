@@ -19,9 +19,9 @@ public class EngageManager : MonoBehaviour
 
     [SerializeField] private WorldUIManager worldUiManager;
 
-    [SerializeField] private StageButtons stageButtons;
+    [SerializeField] private StageButtons[] stageButtons;
 
-    [SerializeField] private int debugStageNo;
+    //[SerializeField] private int debugStageNo;
 
     void Start()
     {
@@ -34,9 +34,11 @@ public class EngageManager : MonoBehaviour
 
         buttonEngage.SetUpButtonEngage();
 
-        StageData stageData = DataBaseManager.instance.GetStageData(debugStageNo);
+        //StageData stageData = DataBaseManager.instance.GetStageData(debugStageNo);
 
-        stageButtons.SetUpStageButtons(stageData, placementSelectStagePopUp);  //引数を活用して必要なステージの情報を渡す
+        //stageButtons.SetUpStageButtons(stageData, placementSelectStagePopUp);  //引数を活用して必要なステージの情報を渡す
+
+        SetStageButtons();
 
         placementEngageCharaPopUp.SetUpBtnEngageChara();
     }
@@ -90,8 +92,18 @@ public class EngageManager : MonoBehaviour
 
     //public void ActivatePlacementSelectStagePopUp()
     //{
-        //placementSelectStagePopUp.gameObject.SetActive(true);
+    //placementSelectStagePopUp.gameObject.SetActive(true);
 
-        //placementSelectStagePopUp.ShowPopUp();
+    //placementSelectStagePopUp.ShowPopUp();
     //}
+
+    private void SetStageButtons()
+    {
+        for (int i = 0; i < stageButtons.Length; i++)
+        {
+            StageData stageData = DataBaseManager.instance.GetStageData(stageButtons[i].stageNo);
+
+            stageButtons[i].SetUpStageButtons(stageData, placementSelectStagePopUp);
+        }
+    }
 }

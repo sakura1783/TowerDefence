@@ -73,9 +73,10 @@ public class PlacementSelectStagePopUp : MonoBehaviour
     {
         HidePopUp();
 
-        SceneStageManager.instance.PrepareNextScene(SceneType.Battle);
+        //TODO 破棄されないゲームオブジェクトにアタッチされているクラスに、ステージの情報を保存する
+        //GameData.instance.stageNo = 
 
-        //TODO シーン遷移する際、ステージも決めてそのステージに飛ぶ
+        SceneStageManager.instance.PrepareNextScene(SceneType.Battle);
     }
 
     /// <summary>

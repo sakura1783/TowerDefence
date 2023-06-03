@@ -31,7 +31,7 @@ public class EngageManager : MonoBehaviour
 
         buttonEngage.SetUpButtonEngage();
 
-        stageButtons.SetUpStageButtons();
+        stageButtons.SetUpStageButtons();  //引数を活用して必要なステージの情報を渡す
 
         placementEngageCharaPopUp.SetUpBtnEngageChara();
     }

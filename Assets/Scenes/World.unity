@@ -135,8 +135,9 @@ GameObject:
   - component: {fileID: 16278519}
   - component: {fileID: 16278518}
   - component: {fileID: 16278517}
+  - component: {fileID: 16278520}
   m_Layer: 5
-  m_Name: btnHarve
+  m_Name: btnHerb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,6 +245,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16278515}
   m_CullTransparentMesh: 1
+--- !u!114 &16278520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16278515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2800b352cc25148cb898840d3a5d6e0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageButton: {fileID: 16278517}
 --- !u!1 &92742864
 GameObject:
   m_ObjectHideFlags: 0
@@ -2161,7 +2175,10 @@ MonoBehaviour:
   canvasTran: {fileID: 390410758}
   charaDatasList: []
   buttonEngage: {fileID: 322943021}
+  placementSelectStagePopUp: {fileID: 1790716834}
   worldUiManager: {fileID: 92742865}
+  stageButtons: {fileID: 16278520}
+  debugStageNo: 2
 --- !u!4 &1471328085
 Transform:
   m_ObjectHideFlags: 0

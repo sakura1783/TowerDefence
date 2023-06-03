@@ -32,4 +32,18 @@ public class DataBaseManager : MonoBehaviour
     {
         return charaDataSO.charaDatasList;
     }
+
+    public StageData GetStageData(int stageNo)
+    {
+        //foreach (StageData stageData in stageDataSO.stageDatasList)
+        //{
+            //if (stageData.stageNo == stageNo)
+            //{
+                //return stageData;
+            //}
+        //}
+        //return null;
+
+        return stageDataSO.stageDatasList.Find(stageData => stageData.stageNo == stageNo);
+    }
 }

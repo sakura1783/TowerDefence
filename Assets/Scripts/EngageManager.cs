@@ -14,11 +14,13 @@ public class EngageManager : MonoBehaviour
 
     [SerializeField] private ButtonEngage buttonEngage;
 
-    private PlacementSelectStagePopUp placementSelectStagePopUp;
+    [SerializeField]　private PlacementSelectStagePopUp placementSelectStagePopUp;
 
     [SerializeField] private WorldUIManager worldUiManager;
 
     [SerializeField] private StageButtons stageButtons;
+
+    [SerializeField] private int debugStageNo;
 
     void Start()
     {
@@ -31,7 +33,9 @@ public class EngageManager : MonoBehaviour
 
         buttonEngage.SetUpButtonEngage();
 
-        stageButtons.SetUpStageButtons();  //引数を活用して必要なステージの情報を渡す
+        StageData stageData = DataBaseManager.instance.GetStageData(debugStageNo);
+
+        stageButtons.SetUpStageButtons(stageData, placementSelectStagePopUp);  //引数を活用して必要なステージの情報を渡す
 
         placementEngageCharaPopUp.SetUpBtnEngageChara();
     }

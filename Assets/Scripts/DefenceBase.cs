@@ -39,9 +39,11 @@ public class DefenceBase : MonoBehaviour
         }
 
         this.hp = maxHp;
-        Debug.Log("hp" + this.hp);  //これ確認する
+        lifeGauge.SetUpLifeGauge(this.hp);
 
-        //TODO ゲージの設定をする
+        Debug.Log("hp" + this.hp);
+
+        //TODO ゲージの設定をする <= すでにLifeGaugeクラスで管理されているが、、？
     }
 
     //TODO 設定用メソッドの作成。作成後はStartメソッドを削除
@@ -63,7 +65,7 @@ public class DefenceBase : MonoBehaviour
             CreateDamageEffect();
 
             //ゲーム画面に耐久力の表示がある場合、その表示を更新
-            lifeGauge.ReduceLifeGauge();
+            lifeGauge.ReduceLifeGauge(hp);
 
             if (hp <= 0 && gameManager.currentGameState == GameManager.GameState.Play)
             {

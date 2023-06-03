@@ -1838,6 +1838,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4278137466325699515, guid: 322d385b6f18245d98209c8333b23de3, type: 3}
+      propertyPath: isDebug
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4278137466325699515, guid: 322d385b6f18245d98209c8333b23de3, type: 3}
       propertyPath: totalClearPoint
       value: 200
       objectReference: {fileID: 0}

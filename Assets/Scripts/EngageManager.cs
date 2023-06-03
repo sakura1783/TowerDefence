@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static GameData;
 
 public class EngageManager : MonoBehaviour
 {
@@ -67,7 +68,7 @@ public class EngageManager : MonoBehaviour
 
     private void CreatePlacementSelectStagePopUp()
     {
-
+        placementSelectStagePopUp.SetUpPlacementSelectStagePopUp();
     }
 
     public void InactivatePlacementEngageCharaPopUp()
@@ -87,10 +88,10 @@ public class EngageManager : MonoBehaviour
         placementSelectStagePopUp.gameObject.SetActive(false);
     }
 
-    public void ActivatePlacementSelectStagePopUp()
-    {
-        placementSelectStagePopUp.gameObject.SetActive(true);
+    //public void ActivatePlacementSelectStagePopUp()
+    //{
+        //placementSelectStagePopUp.gameObject.SetActive(true);
 
-        placementSelectStagePopUp.ShowPopUp();
-    }
+        //placementSelectStagePopUp.ShowPopUp();
+    //}
 }

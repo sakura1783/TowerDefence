@@ -25,18 +25,21 @@ public class PlacementSelectStagePopUp : MonoBehaviour
     /// <summary>
     /// ポップアップの設定
     /// </summary>
-    public void SetUpPlacementSelectStagePopUp(StageData stageData)
+    public void SetUpPlacementSelectStagePopUp()
     {
         //TODO 設定項目があれば追加する
 
         canvasGroup.alpha = 0;
+
+        canvasGroup.blocksRaycasts = false;
 
         SwitchActivateButtons(false);
 
         btnCancel.onClick.AddListener(OnClickCancel);
         btnEnter.onClick.AddListener(OnClickEnter);
 
-        SetSelectStageDetail(stageData);
+        //TODO ステージ情報を初期設定したい場合にはこの命令も使う
+        //SetSelectStageDetail(stageData);
 
         SwitchActivateButtons(true);
     }
@@ -54,9 +57,15 @@ public class PlacementSelectStagePopUp : MonoBehaviour
     /// <summary>
     /// ポップアップの表示
     /// </summary>
-    public void ShowPopUp()
+    public void ShowPopUp(StageData stageData)
     {
+        SetSelectStageDetail(stageData);
+
+        gameObject.SetActive(true);
+
         canvasGroup.DOFade(1.0f, 0.5f);
+
+        canvasGroup.blocksRaycasts = true;
     }
 
     /// <summary>

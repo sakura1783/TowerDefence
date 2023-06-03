@@ -25,7 +25,8 @@ public class StageButtons : MonoBehaviour
         this.stageData = stageData;
         this.placementSelectStagePopUp = placementSelectStagePopUp;
 
-        //stageButton.onClick.AddListener(OnClickStageButton(stageData, placementSelectStagePopUp));  //エラーが出てしまう
+        stageButton.onClick.AddListener(() => OnClickStageButton(stageData, placementSelectStagePopUp));
+        //stageButton.onClick.AddListener(() => OnClickStageButton());
 
         //各ステージの情報を設定する
         SetSelectStageInfo();
@@ -36,7 +37,15 @@ public class StageButtons : MonoBehaviour
     /// </summary>
     private void OnClickStageButton(StageData stageData, PlacementSelectStagePopUp placementSelectStagePopUp)
     {
-        placementSelectStagePopUp.SetUpPlacementSelectStagePopUp(stageData);
+        //TODO ボタンを押したらポップアップを開く。StageDataも渡す
+        placementSelectStagePopUp.ShowPopUp(stageData);
+
+        Debug.Log("OnClickStageButton");
+    }
+
+    public void OnClickStageButton()
+    {
+        placementSelectStagePopUp.SetUpPlacementSelectStagePopUp();
     }
 
     /// <summary>

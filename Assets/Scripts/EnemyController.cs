@@ -56,6 +56,8 @@ public class EnemyController : MonoBehaviour
         tween = transform.DOPath(paths, 1000 / moveSpeed).SetEase(Ease.Linear).OnWaypointChange(ChangeAnimeDirection);  //OnWaypointChangeメソッド内でChangeAnimeDirectionメソッドを実行する
 
         PauseMove();
+
+        Debug.Log("SetUpEnemyControllerが動きました");
     }
 
     /// <summary>
